@@ -11,9 +11,9 @@ header{
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1;
+    z-index: 98;
 }
-nav{
+.nav{
     width: 30%;
     margin-right: 20px;
 }
@@ -78,6 +78,7 @@ margin-top: 50px;
     background-position: center;
     background-size:cover;
     background-attachment: fixed;
+    text-align: center;
 }
 .datos h3{
     margin-bottom:50px ;
@@ -145,6 +146,7 @@ margin-top: 50px;
     padding-bottom: 20px;
  }
  .logo__footer{
+    width: 150px;
     filter:grayscale(100);
     margin-top: 30px;
  }
@@ -239,4 +241,148 @@ margin-top: 50px;
     padding: 20px;
     margin-right: 10px;
  }
+ .menu__icon{
+    display: none;
+ }
+ .menu__desplegable{
+    display: none;
+ }
+ .menu__activo{
+display: flex;
+position: fixed;
+justify-content: space-around;
+align-items: center;
+z-index: 99;
+top: 0;
+height: 100vh;
+width: 100%;
+background-color:#2ecc71;
+text-align: center;
+ }
+ .menu__activo ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20%;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    
+ }
+ .menu__activo ul li{
+    margin: 0;
+    color: white;
+ }
  
+ 
+ @media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .nav{
+        width: 50%;
+    }
+    .informacion{
+        height: 140vw;
+    }
+    .carousel{
+        width: 95%;
+        margin-top: 30px;
+    }
+    .campus__clases{
+        height: 90vw;
+        
+     }
+     .nav__campus{
+display: flex;
+justify-content: flex-end;
+     }
+}
+
+@media only screen and (max-width: 599px) {
+.nav{
+    display: none;
+}
+.menu__icon{
+    display: block;
+    margin-right: 20px;
+}
+.informacion{
+    height: 100vh;
+    text-align: center;
+}
+.carousel{
+    width: 100%;
+    margin-top: 30px;
+}
+.datos__container{
+    flex-direction: column;
+}
+.premios{
+    flex-wrap: wrap;
+    height: min-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.premios__item{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+footer{
+    text-align: center;
+}
+.logo__footer{
+    align-content: center;
+    text-align: center;
+}
+.campus__clases{
+    height: max-content;
+    padding-top: 80px;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+}
+
+table tr{
+    display: flex;
+    flex-direction: column;
+    border: solid gray;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+td{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: justify;
+    background-color: #b8ddf8;
+    border: none;
+ }
+ table thead{
+    display: none;
+ }
+
+ td[data-titulo]{
+    display: flex ;
+ }
+ td[data-titulo]::before{
+    content: attr(data-titulo) ;
+    width: 80px;
+    text-transform: uppercase;
+    margin-right: 20px;
+ }
+ .campus__charlas{
+    padding-bottom: 20px;
+ }
+ .item__dia{
+    margin-left: 0;
+ }
+ .item__dia h5{
+    text-align: center;
+ }
+ .card__container{
+    justify-content: center;
+ }
+ .card{
+    margin-top: 10px;
+ }
+
+}

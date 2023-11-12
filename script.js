@@ -286,5 +286,23 @@ if(proximasCharlas.value=='0' || emailInputCharlas.value==''){
 }
     })
 }
-  
+ 
+
+let menuIcono=document.getElementById('menuIcono')
+let menuDesplegable=document.getElementById('menuDesplegable')
+if (menuIcono) {
+    menuIcono.addEventListener('click', () => {
+      setTimeout(() => {
+        menuDesplegable.className='menu__activo';
+      }, 100);
+    });
+  }
+
+document.addEventListener('click', () => {
+    if (menuDesplegable && (menuDesplegable.className='menu__activo')) {
+      menuDesplegable.className='menu__desplegable';
+    }
+  });
+
+
 
