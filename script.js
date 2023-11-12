@@ -275,12 +275,12 @@ if(proximasCharlas.value=='0' || emailInputCharlas.value==''){
     Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Faltan completar campos."
+        text: "Verifique los datos del formulario."
       });
 }else{
     Swal.fire({
         icon: "success",
-        title: "Cupo reservado",
+        title: "Asistencia reservada correctamente.",
         text: `${nombreDeCharlaSeleccionada(proximasCharlas.value)}`
       });
 }

@@ -213,4 +213,30 @@ margin-top: 50px;
     justify-content: space-around;
     align-items: center;
  }
+ .campus__clases__docente{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+ }
+ .campus__clases__docente h2{
+    margin-top: 100px;
+ }
+ .item__dia{
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 200px;
+ }
+ .card__container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+ }
+ .card{
+    padding: 20px;
+    margin-right: 10px;
+ }
  
