@@ -77,4 +77,65 @@ function estaVisible(elemento) {
 }
   });
 
+  let formulario=document.getElementById('form')
   
+  
+  if(formulario){
+    formulario.onsubmit=(event)=>{
+        event.preventDefault()
+            validarFormulario()
+          }
+  }
+
+  
+
+  function compararDatos(userIngresado,contraseñaIngresada){
+    if(userIngresado=='agustina' && contraseñaIngresada=='123'){
+        return(
+'alumno'
+            )
+    }else if(userIngresado=='rodrigo' && contraseñaIngresada=='123'){
+        return(
+            'docente'
+        )
+    }
+  }
+
+  function validarFormulario(){
+    let user=document.getElementById('user').value
+    let contrasena=document.getElementById('contrasena').value
+switch (compararDatos(user,contrasena)) {
+    case 'alumno': 
+    window.location.href = "pages/alumno.html?user="+ encodeURIComponent(user);
+        break;
+        case 'docente': 
+        window.location.href = "pages/docente.html?user="+ encodeURIComponent(user);
+        break;
+
+    default:
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Usuario o contraseña incorrectas"
+          });
+        break;
+}
+  }
+
+  function cambiarNombre(nombre){
+   
+    let login=document.getElementById('login')
+    login.innerText=`¡Bienvenido/a ${userRecuperado}!`
+  }
+
+
+  let parametrosURL = new URLSearchParams(window.location.search);
+  let userRecuperado = parametrosURL.get("user");
+if(userRecuperado){
+    cambiarNombre(userRecuperado)
+  console.log(userRecuperado)
+}
+
+  
+  
+

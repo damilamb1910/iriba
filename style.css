@@ -14,7 +14,7 @@ header{
     z-index: 1;
 }
 nav{
-    width: 25%;
+    width: 30%;
     margin-right: 20px;
 }
 nav ul{
@@ -159,3 +159,51 @@ margin-top: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
  }
+ .loading{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: #0077cc;
+ }
+ .bienvenida{
+    color: white;
+ }
+ .bienvenida:hover{
+    font-size: 16px;
+    color: white;
+    cursor:auto;
+ }
+ .header__campus{
+    justify-content: space-around;
+ }
+ .header__campus h6{
+    text-align: center;
+ }
+ .campus{
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+ }
+ .tablaClases{
+    color: black;
+    text-align: center;
+    flex-direction: column;
+ }
+ td{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: justify;
+    background-color: #b8ddf8;
+    border: solid gray;
+ }
+ .tablaClases button:hover{
+    color:black;
+    background-color: #F1C40F;
+ }
+ 
