@@ -67,9 +67,9 @@ function estaVisible(elemento) {
   }
   let vuelta=true
   window.addEventListener('scroll', function() {
-    
-    if(vuelta){
- var miElemento = document.getElementById('contadorEstudiantes'); 
+    var miElemento = document.getElementById('contadorEstudiantes');
+    if(vuelta && !userRecuperado && miElemento){
+ 
  if (estaVisible(miElemento)) {
    contadorAlHacerScroll();
    vuelta=false
@@ -133,9 +133,158 @@ switch (compararDatos(user,contrasena)) {
   let userRecuperado = parametrosURL.get("user");
 if(userRecuperado){
     cambiarNombre(userRecuperado)
-  console.log(userRecuperado)
+}
+let fechas=document.getElementById('fechas')
+let proximasCharlas=document.getElementById('proximasCharlas')
+if(proximasCharlas){
+    proximasCharlas.addEventListener('change',()=>{
+        switch (proximasCharlas.value) {
+            case "1":
+                fechas.innerHTML=`
+                <div class="form-group">
+                <h6>Fecha</h6>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="fecha" id="fecha1">
+                <label class="form-check-label" for="fecha1">
+                  11/11
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="fecha" id="fecha2" checked>
+                <label class="form-check-label" for="fecha2">
+                  12/11
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+            <h6>Horario</h6>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="horario" id="horario1" checked>
+                <label class="form-check-label" for="horario1">
+                  15:00 - 17:00
+                </label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="radio" name="horario" id="horario2" checked>
+              <label class="form-check-label" for="horario2">
+                19:00 - 21:00
+              </label>
+            </div>
+           </div>
+          `
+                break;
+                case "2":
+                    fechas.innerHTML=`
+                    <div class="form-group">
+                    <h6>Fecha</h6>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fecha" id="fecha1">
+                    <label class="form-check-label" for="fecha1">
+                      16/11
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fecha" id="fecha2" checked>
+                    <label class="form-check-label" for="fecha2">
+                      18/11
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                <h6>Horario</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="horario" id="horario1" checked>
+                    <label class="form-check-label" for="horario1">
+                      10:00 - 12:00
+                    </label>
+                  </div>
+                  <div class="form-check">
+                  <input class="form-check-input" type="radio" name="horario" id="horario2" checked>
+                  <label class="form-check-label" for="horario2">
+                    18:00 - 20:00
+                  </label>
+                </div>
+               </div>
+              `
+                    break;
+
+
+                    case "3":
+                        fechas.innerHTML=`
+                        <div class="form-group">
+                        <h6>Fecha</h6>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="fecha" id="fecha1">
+                        <label class="form-check-label" for="fecha1">
+                          21/11
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="fecha" id="fecha2" checked>
+                        <label class="form-check-label" for="fecha2">
+                          22/11
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                    <h6>Horario</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="horario" id="horario1" checked>
+                        <label class="form-check-label" for="horario1">
+                          18:00 - 20:00
+                        </label>
+                      </div>
+                      <div class="form-check">
+                      <input class="form-check-input" type="radio" name="horario" id="horario2" checked>
+                      <label class="form-check-label" for="horario2">
+                        20:00 - 22:00
+                      </label>
+                    </div>
+                   </div>
+                  `
+                        break;       
+        
+            default:
+                fechas.innerHTML=''
+                break;
+        }
+    })
 }
 
-  
+function nombreDeCharlaSeleccionada(numero){
+switch (numero) {
+    case '1':
+        return('Introducción a la robotica')
+        break;
+        case '2':
+        return('Desarrollo de inteligencia artificial')
+        break;
+
+    default:
+        return('Tendencias futuras en robotica')
+        break;
+}
+}
+let formCharlas=document.getElementById('formCharlas')
+let emailInputCharlas=document.getElementById('emailInputCharlas')
+let exampleModal=document.getElementById('exampleModal')
+if(formCharlas){
+    formCharlas.addEventListener('submit',(event)=>{
+event.preventDefault()
+if(proximasCharlas.value=='0' || emailInputCharlas.value==''){
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Faltan completar campos."
+      });
+}else{
+    Swal.fire({
+        icon: "success",
+        title: "Cupo reservado",
+        text: `${nombreDeCharlaSeleccionada(proximasCharlas.value)}`
+      });
+}
+    })
+}
   
 
