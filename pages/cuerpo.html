@@ -4,32 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/icono.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
+    <link rel="icon" href="../img/icono.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="sweetalert2.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/bvi6hon.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>IRIBA</title>
 </head>
 
 <body>
     <header>
-        <a href=""><img class="logo" src="./img/logo.png" alt=""></a>
+        <a href="../index.html"><img class="logo" src="../img/logo.png" alt=""></a>
         <svg id="menuIcono" class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
           </svg>
           <nav id="menuDesplegable" class="menu__desplegable" >
             <ul >
-                <li><a href="./pages/oferta.html">Oferta Académica</a></li>
-                <li><a href="./pages/cuerpo.html">Cuerpo Docente</a></li>
+                <li><a href="./oferta.html">Oferta Académica</a></li>
+                <li><a href="">Cuerpo Docente</a></li>
                 <li data-bs-toggle="modal" data-bs-target="#exampleModal" id="login">Login</li>
             </ul>
         </nav>
         <nav class="nav">
             <ul>
-                <li><a href="./pages/oferta.html">Oferta Académica</a></li>
-                <li><a href="./pages/cuerpo.html">Cuerpo Docente</a></li>
+                <li><a href="./oferta.html">Oferta Académica</a></li>
+                <li><a href="">Cuerpo Docente</a></li>
                 <li data-bs-toggle="modal" data-bs-target="#exampleModal" id="login">Login</li>
             </ul>
         </nav>
@@ -40,75 +39,134 @@
               <span class="visually-hidden">Loading...</span>
             </div>
           </div>
-        <section class="informacion">
-            <h1>INSTITUTO DE ROBÓTICA E INNOVACIÓN DE BUENOS AIRES</h1>
-            <p>Ofrecemos programas emocionantes para jóvenes de 5 a 17 años interesados en el mundo de la robótica y la
-                tecnología.</p>
-            <div id="carouselExampleCaptions" data-bs-ride="carousel" class="carousel  slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./img/car1.jpg" class="d-block w-100 img__car" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Innovación</h5>
-                            <p>Somos líderes en innovación educativa y tecnólogica.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/car2.jpg" class="d-block w-100 img__car" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Humanidad</h5>
-                            <p>La cercania con nuestros estudiantes nos permite desarrollar la confianza necesaria para
-                                impursarles a más.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/car3.jpg" class="d-block w-100 img__car" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Equipo</h5>
-                            <p>El aprendizaje colaborativo es uno de nuestros principios.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+          <section class="cuerpo__docente">
+            <h1>Cuerpo Docente</h1>
+<div class="docentes__container">
+
+<div class="docente">
+    <img src="../img/faces/a.jpg" alt="Foto Profesor Juan Pérez">
+    <h5>Profesor Juan Pérez</h5>
+    <p>Experto en Robótica y Automatización. Con más de 10 años de experiencia en la enseñanza de
+        tecnologías
+        emergentes. Su pasión por la innovación y el aprendizaje práctico lo convierte en un docente
+        destacado.</p>
+</div>
+
+
+<div class="docente">
+    <img src="../img/faces/i.jpg" alt="Foto Profesora Ana Gómez">
+    <h5>Profesora Ana Gómez</h5>
+    <p>Especialista en Programación y Desarrollo de Software. Su enfoque pedagógico se centra en el
+        desarrollo de habilidades lógicas y creativas en la programación. Ha participado en proyectos
+        educativos innovadores.</p>
+</div>
+
+<div class="docente">
+    <img src="../img/faces/j.jpg" alt="Foto Profesora Laura Hernández">
+    <h5>Profesora Laura Hernández</h5>
+    <p>Investigadora en Inteligencia Artificial y Machine Learning. Combina su experiencia en la academia con
+        aplicaciones prácticas de la inteligencia artificial. Ha publicado artículos en revistas
+        especializadas.</p>
+</div>
+
+
+<div class="docente">
+    <img src="../img/faces/b.jpg" alt="Foto Profesor Diego Rodríguez">
+    <h5>Profesor Diego Rodríguez</h5>
+    <p>Desarrollador de Videojuegos con amplia experiencia en la industria. Ha trabajado en el diseño y
+        desarrollo de juegos para plataformas populares. Apasionado por compartir su conocimiento con
+        estudiantes.</p>
+</div>
+
+
+<div class="docente">
+    <img src="../img/faces/c.jpg" alt="Foto Profesor Martín López">
+    <h5>Profesor Martín López</h5>
+    <p>Ingeniero Electrónico especializado en Robótica. Su enfoque se centra en la aplicación práctica de la
+        electrónica en el diseño de robots. Ha liderado proyectos de investigación en el campo de la
+        robótica.</p>
+</div>
+
+
+
+<div class="docente">
+    <img src="../img/faces/k.jpg" alt="Foto Profesora María Rodríguez">
+    <h5>Profesora María Rodríguez</h5>
+    <p>Especialista en Diseño de Experiencia de Usuario (UX). Combina su conocimiento técnico con un enfoque centrado
+        en el usuario. Ha trabajado en proyectos de diseño de interfaces para aplicaciones innovadoras.</p>
+</div>
+
+
+<div class="docente">
+    <img src="../img/faces/d.jpg" alt="Foto Profesor Carlos Sánchez">
+    <h5>Profesor Carlos Sánchez</h5>
+    <p>Ingeniero en Sistemas con experiencia en Ciberseguridad. Su labor educativa se centra en la concienciación
+        sobre la seguridad informática. Ha participado como conferencista en eventos de ciberseguridad.</p>
+</div>
+
+
+<div class="docente">
+    <img src="../img/faces/l.jpg" alt="Foto Profesora Marta Jiménez">
+    <h5>Profesora Marta Jiménez</h5>
+    <p>Experta en Desarrollo Web Full Stack. Su enseñanza abarca desde la creación de la interfaz de usuario hasta
+        el desarrollo del servidor. Ha colaborado en proyectos de sitios web dinámicos y aplicaciones interactivas.</p>
+</div>
+
+
+<div class="docente">
+    <img src="../img/faces/f.jpg" alt="Foto Profesor Andrés Flores">
+    <h5>Profesor Andrés Flores</h5>
+    <p>Investigador en Ciencia de Datos. Su experiencia se centra en el análisis y la interpretación de grandes
+        conjuntos de datos. Ha colaborado en proyectos de investigación aplicada en diversas disciplinas.</p>
+</div>
+
+
+<div class="docente">
+    <img src="../img/faces/m.jpg" alt="Foto Profesora Julia Herrera">
+    <h5>Profesora Julia Herrera</h5>
+    <p>Arquitecta de Sistemas con enfoque en la Nube. Su enseñanza se orienta hacia la implementación de soluciones
+        basadas en la nube. Ha participado en proyectos de migración y desarrollo de aplicaciones en entornos
+        cloud.</p>
+</div>
+
+
+<div class="docente">
+    <img src="../img/faces/g.jpg" alt="Foto Profesor Alejandro Torres">
+    <h5>Profesor Alejandro Torres</h5>
+    <p>Ingeniero en Redes de Comunicación. Especializado en infraestructura de redes y seguridad. Su enseñanza se
+        centra en la configuración y mantenimiento de redes empresariales.</p>
+</div>
+
+
+<div class="docente">
+    <img src="../img/faces/n.jpg" alt="Foto Profesora Carolina Gómez">
+    <h5>Profesora Carolina Gómez</h5>
+    <p>Experta en Desarrollo de Aplicaciones Móviles. Su enfoque educativo abarca la creación de aplicaciones para
+        dispositivos móviles. Ha trabajado en proyectos de desarrollo de apps innovadoras.</p>
+</div>
+
+
+<div class="docente">
+    <img src="../img/faces/h.jpg" alt="Foto Profesor Javier Mendoza">
+    <h5>Profesor Javier Mendoza</h5>
+    <p>Desarrollador Full Stack con experiencia en tecnologías emergentes. Su enseñanza incluye el desarrollo de
+        aplicaciones escalables y el uso de frameworks modernos.</p>
+</div>
+
+
+<div class="docente">
+    <img src="../img/faces/o.jpg" alt="Foto Profesora Beatriz Ramírez">
+    <h5>Profesora Beatriz Ramírez</h5>
+    <p>Investigadora en Realidad Virtual. Su trabajo se centra en la aplicación de la realidad virtual en
+        entornos educativos y de simulación. Ha participado en proyectos pioneros en este campo.</p>
+    </div>
+
+</div>
+            
+
         </section>
-        <section class="datos">
-            <h3>¡Nuestros datos hablan por nosotros!</h3>
-            <div class="datos__container">
-                <div class="datos__item">
-                    <h4 id="contadorEstudiantes">0</h4>
-                    <h5>Estudiantes</h5>
-                </div>
-                <div class="datos__item">
-                    <h4 id="contadorGraduados">0</h4>
-                    <h5>Graduados</h5>
-                </div>
-                <div class="datos__item">
-                    <h4 id="contadorConvenios">0</h4>
-                    <h5>Convenios con empresas</h5>
-                </div>
-                <div class="datos__item">
-                    <h4 id="contadorDocentes">0</h4>
-                    <h5>Docentes</h5>
-                </div>
-            </div>
+          
+          
 
         </section>
         <section class="login">
@@ -138,30 +196,10 @@
                 </div>
             </div>
         </section>
-        <section class="premios">
-            <div class="premios__item">
-                <img src="./img/premio.png" alt="">
-                <img src="./img/petersen.png" alt="">
-                <p>Debido a la forma en que se han enfocado los aspectos clave en la enseñanza de la tecnología a través
-                    del desarrollo de proyectos interdisciplinarios. </p>
-            </div>
-            <div class="premios__item">
-                <img src="./img/premio.png" alt="">
-                <img src="./img/unesco.svg" alt="">
-                <p>Recompensa a los enfoques innovadores que utilizan las nuevas tecnologías con miras a ampliar las
-                    oportunidades de educación y aprendizaje para todos a lo largo de toda la vida</p>
-            </div>
-            <div class="premios__item">
-                <img src="./img/premio.png" alt="">
-                <img src="./img/acm_logo_tablet.svg" alt="">
-                <p>Este premio reconoce a las instituciones educativas de tecnología que han tenido un impacto
-                    significativo en la educación en ciencias de la computación.</p>
-            </div>
-          
-        </section>
+       
     </main>
     <footer>
-<img class="logo__footer" src="./img/logo.png" alt="">
+<img class="logo__footer" src="../img/logo.png" alt="">
 <div class="redes__contain">
     <a href=""><svg  xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
         <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -179,7 +217,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./script.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

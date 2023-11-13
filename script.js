@@ -304,5 +304,16 @@ document.addEventListener('click', () => {
     }
   });
 
+function desactivarLoading(){
+    let loading=document.getElementById('loading')
+    loading.style.display='none'
+}
+
+
+  window.onload = function() {
+    
+    setTimeout(desactivarLoading, 2000); 
+};
+
 
 
